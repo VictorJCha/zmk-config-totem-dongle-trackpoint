@@ -1,11 +1,11 @@
 # Copyright (c) 2023 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-config SHIELD_TOTEM_LEFT
+config SHIELD_TOTEM_TP_LEFT
 	def_bool $(shields_list_contains,totem_left)
 
-config SHIELD_TOTEM_RIGHT
+config SHIELD_TOTEM_TP_RIGHT
 	def_bool $(shields_list_contains,totem_right)
 
-config SHIELD_TOTEM_DONGLE
+config SHIELD_TOTEM_TP_DONGLE
 	def_bool $(shields_list_contains,totem_dongle)
