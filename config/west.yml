@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/petejohanson
     - name: urob
       url-base: https://github.com/urob
-    - name: carrefinho                          
-      url-base: https://github.com/carrefinho 
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
 
   projects:
 
@@ -31,10 +31,10 @@ manifest:
     #  remote: infused-kim
     #  revision: pr-testing/mouse_ps2_module_base
     #  import: app/west.yml
-    - name: prospector-zmk-module                 
-      remote: carrefinho                        
-      revision: main           
-
+    - name: prospector-zmk-module
+      remote: carrefinho     
+      revision: main
+      
     # pete's zmk fork with the most up to date mouse PR, which is more
     # up-to-date, but may contain incompatibilities with the PS/2 mouse & TP
     # driver module.
@@ -53,7 +53,7 @@ manifest:
     # infused-kim's zmk fork with mouse PR AND urob's improvements, which
     # might be out-dated, but is known to be compatible with PS/2 mouse & TP
     # driver module.
-     - name: zmk
+    - name: zmk
        remote: infused-kim
        revision: pr-testing/mouse_ps2_module_base_urob
        import: app/west.yml
