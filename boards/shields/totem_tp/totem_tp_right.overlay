@@ -30,7 +30,7 @@
         ;
 };
 
-/*
+/* this may need to be on the dongle once new badjeff driver is used - VC
  * PS/2 Mouse / Trackpoint - User Configuration
  *
  * Enable PS/2 drivers on this side of the keyboard.
