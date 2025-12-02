@@ -10,6 +10,10 @@ manifest:
       url-base: https://github.com/urob
     - name: carrefinho
       url-base: https://github.com/carrefinho
+    - name: badjeff
+      url-base: https://github.com/badjeff
+    - name: madswolf
+      url-base: https://github.com/madswolf
 
   projects:
 
@@ -63,9 +67,19 @@ manifest:
     #
 
     # Module for PS/2 mouse & TP driver
+    #- name: kb_zmk_ps2_mouse_trackpoint_driver
+    #  remote: infused-kim
+    #  revision: main
+
+    #- name: kb_zmk_ps2_mouse_trackpoint_driver
+    #  remote: badjeff
+    #  revision: main
+
     - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: infused-kim
+      remote: madswolf
       revision: main
+
+
 
   self:
     path: config
