@@ -87,6 +87,9 @@
 //#define MOUSE_PS2_PIN_SCL_PRO_MICRO <&pro_micro 16 GPIO_ACTIVE_HIGH>
 //#define MOUSE_PS2_PIN_SDA_PRO_MICRO <&pro_micro 10 GPIO_ACTIVE_HIGH>
 
+#define MOUSE_PS2_PIN_SCL_PRO_MICRO <&gpio0 16 GPIO_ACTIVE_HIGH>
+#define MOUSE_PS2_PIN_SDA_PRO_MICRO <&gpio1 0 GPIO_ACTIVE_HIGH>
+
 // Configure the Power-On-Reset pin
 //
 // Uncomment and configure this pin if you have an extra free pin and want the
