@@ -68,13 +68,13 @@
 
   // Only apply these settings on the side that has the TP connected
   // (usually the right side)
-  //#ifdef MOUSE_PS2_DT_PRESENT
+  #ifdef MOUSE_PS2_DT_PRESENT
 
    /*
     * Input Listener Config
     */
 
-    //&mouse_ps2_input_listener {
+    &mouse_ps2_input_listener {
 
       // Adjust pointing device axes.
       // This adjusts the values inside the zmk driver. Some
@@ -86,16 +86,16 @@
 
       // Set the layer that should automatically activate when the mouse is
       // moving.
-      //layer-toggle = <MOUSE_TP>;
+      layer-toggle = <MOUSE_TP>;
 
       // How long the mouse needs to move for before the layer is activated (to
       // avoid accidental activations while typing) (Default: 250)
-      //layer-toggle-delay-ms = <250>;
+      layer-toggle-delay-ms = <250>;
 
       // How long to wait, after the last mouse movement, before deactivating
       // the layer (Default: 250)
-      //layer-toggle-timeout-ms = <250>;
-    //};
+      layer-toggle-timeout-ms = <250>;
+    };
 
 
    /*
@@ -161,3 +161,38 @@
       // scroll-mode;
 
     };
+
+    // Enable PS/2 Mouse Devices
+    // In `your_keyboard_right.overlay` all devices have `status = "disabled"`.
+    // So,they are never compiled into the firmware.
+    //
+    // Here we enable them, but we do it within the #ifdef HAS_MOUSE_TP code
+    // block, which prevents compilation and potential build errors when we
+    // undefine HAS_MOUSE_TP in corne_tp.keymap
+    &mouse_ps2  {
+      status = "okay";
+    };
+
+    &mouse_ps2_input_listener {
+      status = "okay";
+    };
+
+    #ifdef MOUSE_PS2_DRIVER_UART
+
+      &uart0 {
+        status = "okay";
+      };
+
+      &uart_ps2 {
+        status="okay";
+      };
+
+    #else
+
+      &gpio_ps2  {
+        status = "okay";
+      };
+
+    #endif  // MOUSE_PS2_DRIVER_UART
+  #endif  // MOUSE_PS2_DT_PRESENT
+#endif  // HAS_MOUSE_TP
