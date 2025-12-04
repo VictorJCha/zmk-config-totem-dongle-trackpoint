@@ -161,38 +161,3 @@
       // scroll-mode;
 
     };
-
-    // Enable PS/2 Mouse Devices
-    // In `your_keyboard_right.overlay` all devices have `status = "disabled"`.
-    // So,they are never compiled into the firmware.
-    //
-    // Here we enable them, but we do it within the #ifdef HAS_MOUSE_TP code
-    // block, which prevents compilation and potential build errors when we
-    // undefine HAS_MOUSE_TP in corne_tp.keymap
-    &mouse_ps2  {
-      status = "okay";
-    };
-
-    &mouse_ps2_input_listener {
-      status = "okay";
-    };
-
-    #ifdef MOUSE_PS2_DRIVER_UART
-
-      &uart0 {
-        status = "okay";
-      };
-
-      &uart_ps2 {
-        status="okay";
-      };
-
-    #else
-
-      &gpio_ps2  {
-        status = "okay";
-      };
-
-    #endif  // MOUSE_PS2_DRIVER_UART
-  #endif  // MOUSE_PS2_DT_PRESENT
-#endif  // HAS_MOUSE_TP
