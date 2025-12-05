@@ -74,10 +74,7 @@ manifest:
     - name: kb_zmk_ps2_mouse_trackpoint_driver
       remote: badjeff
       revision: main
-
-    - name: zmk-helpers
-      remote: urob
-      revision: v0.3
+      
     #- name: kb_zmk_ps2_mouse_trackpoint_driver
     #  remote: madswolf
     #  revision: main
