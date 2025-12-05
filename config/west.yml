@@ -71,13 +71,13 @@ manifest:
     #  remote: infused-kim
     #  revision: main
 
-    #- name: kb_zmk_ps2_mouse_trackpoint_driver
-    #  remote: badjeff
-    #  revision: main
-
     - name: kb_zmk_ps2_mouse_trackpoint_driver
-      remote: madswolf
+      remote: badjeff
       revision: main
+
+    #- name: kb_zmk_ps2_mouse_trackpoint_driver
+    #  remote: madswolf
+    #  revision: main
 
 
 
